@@ -1,3 +1,7 @@
+/* I have made some changes to the original css such as colour changes and stuff to make the edited content work, all the new/added classes are at the bottom of the document */
+
+/* original css template source https://codyhouse.co/gem/css-style-guide-template/ */
+
 /* -------------------------------- 
 
 xBackground 
@@ -969,11 +973,25 @@ section:nth-of-type(6) h2::before {
   display: none;
 }
 
+@-moz-document url-prefix() {
+  /* hide custom arrow on Firefox */
+  .cd-select::after {
+    display: none;
+  }
+}
+.no-csstransitions .cd-select::after {
+  display: none;
+}
+
+/* group added css below */
+
+/* added iframe css for youtube embedding */
 iframe {
 height: 300px;
 width: 100%;
 }
 
+/* added a footer class for the copyright and company links at the bottom of pages */
 .footer{
   position: static;
   right: 0;
@@ -990,12 +1008,51 @@ width: 100%;
 	}
 }
 
-@-moz-document url-prefix() {
-  /* hide custom arrow on Firefox */
-  .cd-select::after {
-    display: none;
-  }
+/* CSS for textinput and the sumbit button */
+
+.txtinput{
+  width: 100%;
 }
-.no-csstransitions .cd-select::after {
-  display: none;
+
+.txtinput-message{
+  width: 100%;
+  height: 70px;
 }
+
+.submitbtn{
+  border: none;
+  box-shadow: none;
+  border-radius: .25em;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  padding: .6em 2.2em;
+  cursor: pointer;
+  background: #5f8ee4; 
+  width: 20%;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.cd-social {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: 0 1pheader x 1px rgba(0, 0, 0, 0.05);
+  padding: 6px;
+  text-align: center;
+  height: 134px;
+  line-height: 200px;
+}
+
+.sociallink {
+height: 80%;
+padding: 10px;
+padding-bottom: -10px;
+}
+
+
+
+
+
+
